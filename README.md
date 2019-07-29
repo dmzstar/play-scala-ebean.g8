@@ -1,4 +1,4 @@
-# play-scala-ebean-seed.g8
+# play-scala-ebean.g8
 
 Giter8 template for generating a Play project seed in Scala with Ebean.  
 
