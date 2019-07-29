@@ -1,0 +1,19 @@
+name := """$name$"""
+organization := "$organization$"
+
+version := "1.0-SNAPSHOT"
+
+lazy val root = (project in file(".")).enablePlugins(PlayScala,PlayEbean)
+
+scalaVersion := "2.13.0"
+
+libraryDependencies += guice
+libraryDependencies += javaJdbc
+libraryDependencies += "com.h2database" % "h2" % "1.4.199"
+libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play" % "4.0.3" % Test
+
+// Adds additional packages into Twirl
+//TwirlKeys.templateImports += "$organization$.controllers._"
+
+// Adds additional packages into conf/routes
+// play.sbt.routes.RoutesKeys.routesImport += "$organization$.binders._"
